@@ -7,9 +7,15 @@
     </head>
     <body>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/project">Project</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li class="{{ 'active' if active_page == 'home' else '' }}">
+                <a href="/">Home</a>
+            </li>
+            <li class="{{ 'active' if active_page == 'project' else '' }}">
+                <a href="/project">Project</a>
+            </li>
+            <li class="{{ 'active' if active_page == 'contact' else '' }}">
+                <a href="/contact">Contact</a>
+            </li>
           </ul> 
         {% block content %}{% endblock %}
     </body>
