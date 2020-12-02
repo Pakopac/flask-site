@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Deploy ghpage
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Docker build
       run: |
-        docker build . -t flask-site
+        python app.py
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
