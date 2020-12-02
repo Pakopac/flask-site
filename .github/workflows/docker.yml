@@ -18,7 +18,7 @@ jobs:
         
     - name: Install rsync 📚
       run: |
-        apt-get update && apt-get install -y rsync
+        sudo apt-get update && sudo apt-get install -y rsync
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
