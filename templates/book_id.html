@@ -1,0 +1,17 @@
+{% extends 'navbar.html' %}
+
+{% set active_page = "project" %}
+
+{% block content %}
+
+<h1>Book info</h1>
+{% for book in books %}
+    {% if book.id == id | int%}
+        <div class="book-info">
+            <div>id: {{book.id}}</div>
+            <div>title: {{book.title}}</div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

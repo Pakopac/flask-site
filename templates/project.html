@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+
+{% set active_page = "project" %}
+
+{% block content %}
+<h1>{% block title %}Project{% endblock %}</h1>
+<p>Click on a book to see it</p>
+<div class="list-books">
+{% for book in books %}
+    <a class="book" href="/book/{{book.id}}">
+        {{book.title}}
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
